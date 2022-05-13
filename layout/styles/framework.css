@@ -111,6 +111,7 @@ address, article, aside, figcaption, figure, footer, header, main, nav, section{
 .one_half, .two_quarter{width:47.89473%;}
 .two_third{width:65.26315%;}
 .three_quarter{width:73.94736%;}
+.one_third_true{width:33.33333%;display:inline-block; float:left; margin:0 0 0 0; list-style:none;}
 
 
 /* Spacing
