@@ -270,7 +270,7 @@ td{border-width:0 1px;}
 --------------------------------------------------------------------------------------------------------------- */
 #gallery{display:block; width:100%; margin-bottom:50px;}
 #gallery figure figcaption{display:block; width:100%; clear:both;}
-#gallery li{margin-bottom:30px;}
+#gallery li{margin-bottom:0px;}
 
 
 /* Font Awesome Social Icons
@@ -538,6 +538,7 @@ table a, #comments a{background-color:inherit;}
   font-weight: bold;
   border: None;
   transition: 0.7s;
+  padding: 1px;
 }
 .btn-modal:hover,
 .btn-modal:focus {
@@ -549,7 +550,7 @@ table a, #comments a{background-color:inherit;}
 } 
 
 .img-modal {
-	width: 50%;
+	width: 66%;
 	display:inline-block;
 	float:left;
 	margin:5px 100px 5px 5px;
