@@ -1,2 +1,2 @@
 # YesPrimeMinister.github.io
-Google pages site
+Personal portfolio site based on Gleblu template by os-templates.com
