@@ -493,6 +493,12 @@ table a, #comments a{background-color:inherit;}
 	.font-x3{font-size:1.8rem;}
 }
 
+.ico_contact {
+	width: 35%;
+	height: 35%;
+	background-color: green;
+	padding: 4%;
+}
 
  /* The Modal (background) */
 .modal {
