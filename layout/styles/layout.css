@@ -443,6 +443,7 @@ table a, #comments a{background-color:inherit;}
 
 	#copyright{}
 	#copyright p:first-of-type{margin-bottom:10px;}
+	.first{clear:left;, margin-left:0;}
 }
 
 @media screen and (max-width:750px){
@@ -471,6 +472,7 @@ table a, #comments a{background-color:inherit;}
 	#footer .latestimg > li, #footer .latestimg > li:nth-last-child(-n+3){display:inline-block; float:none; width:auto; margin:0 5% 5% 0;}
 	#footer .latestimg > li:last-child{margin-bottom:0;}
 	#footer .latestimg > li img{width:auto;}
+	.first{clear:left;, margin-left:0;}
 }
 
 @media screen and (max-width:450px){
