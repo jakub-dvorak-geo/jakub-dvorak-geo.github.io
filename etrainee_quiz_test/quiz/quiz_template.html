@@ -346,8 +346,8 @@ General structure of one individual radio button should be similar to this: <cod
 tag structured in this way: <code>--min value--&lt;input type="range" min=--min value-- max=--max value-- step=--step value--&gt;--max value--</code></p>
 </li>
 <li>
-<p><strong>Matching</strong> type questions are created as a table of <code>&lt;select&gt;</code> elements. Each table row contains a <code>&lt;select&gt;</code>
-followed by the corresponding answer in the first row, while the answer to be matched is in a second column.
+<p><strong>Matching</strong> type questions are created as two separate tables. First table contains <code>&lt;select&gt;</code> elements with the corresponding value.
+Second table contains the answers to be matched with values from the first table. 
 All <code>&lt;select&gt;</code> elements corresponding to a single question need to have the same name and individual options
 are added using <code>&lt;option&gt;</code> tags. Overall, a matching type question should adhere to this structure:</p>
 </li>
@@ -367,15 +367,26 @@ are added using <code>&lt;option&gt;</code> tags. Overall, a matching type quest
         --text of the corresponding answer in the first column--
     &lt;/td&gt;
     &lt;td&gt;
-        --answer in the second column--
+        --another select and text--
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     ...
 &lt;/tr&gt;
-...
-&lt;/table&gt;&lt;br&gt;
-&lt;div hidden id=&quot;correct_q_--question number--&quot;&gt;--The correct answer--&lt;/div&gt;&lt;br&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+tr&gt;
+    &lt;td&gt;--one answer--&lt;/td&gt;
+    &lt;td&gt;--second_answer--&lt;/td&gt;
+    ...
+&lt;/tr&gt;
+&lt;tr&gt;
+    ...
+&lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;div hidden id=&quot;correct_q_--question number--&quot;&gt;--The correct answers--&lt;/div&gt;&lt;br&gt;
 &lt;output id=&quot;output_q_--question number--&quot;&gt;&lt;br&gt;&lt;br&gt;
 </code></pre>
 <h3 id="quiz-evaluation">Quiz evaluation</h3>
@@ -449,6 +460,7 @@ consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor
 <label for="q_07">
 Which option corresponds to which?
 </label><br>
+<!--1st table - contains select elements-->
 <table>
 <tr>
     <td><select name="q_07"> 
@@ -460,9 +472,6 @@ Which option corresponds to which?
         <option>E</option>
     </select>
     1. Sentinel-1</td>
-    <td>A. Land optical</td>
-</tr>
-<tr>
     <td><select name="q_07"> 
         <option></option>
         <option>A</option>
@@ -472,9 +481,6 @@ Which option corresponds to which?
         <option>E</option>
     </select>
     2. Sentinel-2</td>
-    <td>B. Atmosphere</td>
-</tr>
-<tr>
     <td><select name="q_07"> 
         <option></option>
         <option>A</option>
@@ -484,7 +490,6 @@ Which option corresponds to which?
         <option>E</option>
     </select>
     3. Sentinel-3</td>
-    <td>C. SAR C-Band</td>
 </tr>
 <tr>
     <td><select name="q_07"> 
@@ -496,9 +501,6 @@ Which option corresponds to which?
         <option>E</option>
     </select>
     4. Sentinel-5P</td>
-    <td>D. Ocean altimetry</td>
-</tr>
-<tr>
     <td><select name="q_07"> 
         <option></option>
         <option>A</option>
@@ -508,9 +510,23 @@ Which option corresponds to which?
         <option>E</option>
     </select>
     5. Sentinel-6</td>
-    <td>E. Ocean optical</td>
+    <td></td>
 </tr>
 </table>
+
+<!--2nd table - contains corresponding answers-->
+<table>
+<tr>
+    <td>A. Land optical</td>
+    <td>B. Atmosphere</td>
+    <td>C. SAR C-Band</td>
+</tr>
+<tr>
+    <td>D. Ocean altimetry</td>
+    <td>E. Ocean optical</td>
+    <td></td>
+</tr>
+</table><br>
 <div hidden id="correct_q_07">C A E B D</div>
 <output id="output_q_07"></output><br><br>
 
