@@ -308,7 +308,7 @@ label span{color:#FF0000; background-color:inherit;}
 input:focus, textarea:focus, *:required:focus{border-color:#FF3F4A !important;}
 
 .overlay{color:#FFFFFF; background-color:inherit;}
-.overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
+.overlay::after{color:inherit; background-color:rgba(0,0,0,.0);}
 .overlay.light{color:#474747;}
 .overlay.light::after{background-color:rgba(255,255,255,.7);}
 
@@ -341,8 +341,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#FF3F4A !important;}
 #header #logo h1 a{color:inherit;}
 
 
-/* Page Intro */
 #pageintro{color:#FFFFFF;}
+#intropanel{background-color:rgba(0,0,0,.6); width: 65%; padding:2.5%; font-size:12pt;}
+/* Page Intro */
 
 
 /* Introblocks */
@@ -493,6 +494,16 @@ table a, #comments a{background-color:inherit;}
 	.font-x3{font-size:1.8rem;}
 }
 
+.intro {
+	background-color: green;
+}
+
+.ico_contact {
+	width: 35%;
+	height: 35%;
+	background-color: green;
+	padding: 4%;
+}
 
  /* The Modal (background) */
 .modal {

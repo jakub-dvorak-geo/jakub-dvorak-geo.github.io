@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hello, world of Leaflet!</title>
+		
+		<link rel="stylesheet" href="scripts/Leaflet/leaflet.css">
+		<script src="scripts/Leaflet/leaflet.js"></script>
+		<script src="scripts/jQuery/jquery-3.6.0.min.js"></script>
+		
+		<style>
+		body {
+		margin: 0px;
+		text-align: center;
+		font-family: Verdana, Arial;
+		}
+		
+		header {
+		height: 180px;
+		background-color: grey;
+		margin-top: 0px;
+		margin-bottom: 30px;
+		padding-top: 20px;
+		}
+		
+		footer {
+		color: white;
+		background-color: grey;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 30px;
+		margin-top: 20px;
+		}
+		
+		.container {
+		text-align: left;
+		}
+		
+		h1 {
+		margin: 0pt;
+		text-align: center;
+		}
+		
+		p {
+		margin-left:20%;
+		margin-right:20%;
+		margin-bottom: 30px;
+		}
+		
+		ul {
+		margin-left:25%;
+		}
+		
+		#map {
+		margin-left: 10%;
+		width: 80%;
+		height: 800px;
+		}
+		</style>
+	</head>
+<body>
+
+	<header>
+		<h1>Jak plné jsou v Praze kontejnery na tříděný odpad?</h1>
+	</header>
+	
+	<div class='container'>
+	<p>
+		Praha monitoruje u zhruba 400 kontejnerů na tříděný odpad jejich zaplněnost, 
+		původně jde o projekt <a href=https://www.smartprague.eu/projekty/chytry-svoz-odpadu>chytrý svoz odpadu</a>
+		, který vznikl jako součást iniciativy <a href=https://www.smartprague.eu/>Smart Prague</a>. Data jsou volně dostupná přes platformu
+		<a href=https://golemioapi.docs.apiary.io/#reference/waste/sorted-waste-fullness-sensors-data>golemio</a>.
+	</p>
+	
+	<p>
+	Hlavním cílem tohoto pilotního projektu bylo vytvoření nástroje pro kontrolu stavu a naplněnosti nádob na separovaný odpad (papír, plast, sklo barevné, sklo čiré, nápojové kartóny, kovové obaly). Nástroj využívá ultrazvukové IoT senzory, které jsou primárně instalovány v podzemních nádobách a nádobách se spodním výsypem, u kterých je svoz finančně i časově náročnější. 
+	</p>
+	<p>
+    Informace o zaplněnosti a výtěžnosti nádob jsou dostupné zaměstnancům města a městským částem, příslušným svozovým firmám a občanům v aplikaci Moje Praha. Tento nástroj pomáhá zpřesnit a kvalifikovat rozhodování o směřování výdajů v oblasti investic do četnosti svozů. 
+    </p>
+	<p>
+	Projekt získal první cenu v národní soutěži Chytrá města 2019, v kategorii „Chytré město 2019 nad 200 000 obyvatel a dále uspěl ve finále 17. ročníku soutěže IT projekt roku 2019, kterou uděluje Česká asociace manažerů informačních technologií (CACIO). 
+	</p>
+ 
+	<p>
+	<b>Funkce</b>
+	<ul>
+		<li>Optimální svoz odpadu z velkoobjemových kontejnerů, primárně podzemních</li>
+	</ul>
+	</p>
+ 
+	<p>
+	<b>Přínos</b>
+	<ul>
+		<li>Snížení nákladů na svoz odpadu</li>
+		<li>Snížení zátěže na životní prostředí</li>
+		<li>Zvýšení komfortu na silnicích</li>
+		<li>Sběr dat pro další použití a optimalizaci veřejného prostoru</li>
+	</ul>
+	</p>
+	</div>
+
+	<div id='map'></div>
+	<script type='text/javascript' src='map.js'></script>
+	
+	<footer>
+	Created in April 2022 by Jakub Dvořák as coursework for <i>Distribution of spatial data</i><br>
+	jakub.dvorak(at)natur.cuni.cz<br>
+	Dept. of Applied Geoinformatics and Cartography, Faculty of Science, Charles University<br>
+	Uses open data provided by XXX and XXX<br>
+	Distributed under the XXX license.
+	</footer>
+</body>
+</html>
