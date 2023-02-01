@@ -22,7 +22,6 @@ span[i].onclick = function() {
 }
 } 
 
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   for (let i = 0; i < modal.length; i++) {
@@ -31,3 +30,17 @@ window.onclick = function(event) {
 	}
   }
 } 
+
+// Opening modals from differnt pages
+var modal_name_to_open = document.location.hash.substr(1);
+
+switch (modal_name_to_open) {
+	case "isprs_paper": modal[0].style.display = "block";
+	break;
+	case "msc_thesis": modal[1].style.display = "block";
+	break;
+	case "cnn_compare": modal[2].style.display = "block";
+	break;
+	case "bsc_thesis": modal[4].style.display = "block";
+	break;
+}

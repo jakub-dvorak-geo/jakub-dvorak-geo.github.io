@@ -45,18 +45,18 @@ function main() {
 	//define symbology for containers
 	var layer_style = function(feature) {
 		switch (feature.properties.district) {
-			case 'praha-1':  return {fillColor: '#f94144'};
-			case 'praha-2':  return {fillColor: '#f3722c'};
-			case 'praha-3':  return {fillColor: '#f8961e'};
-			case 'praha-4':  return {fillColor: '#f9844a'};
-			case 'praha-5':  return {fillColor: '#f9c74f'};
-			case 'praha-6':  return {fillColor: '#90be6d'};
-			case 'praha-7':  return {fillColor: '#43aa8b'};
-			case 'praha-8':  return {fillColor: '#4d908e'};
-			case 'praha-9':  return {fillColor: '#577590'};
-			case 'praha-10': return {fillColor: '#277da1'};
-			case 'praha-16': return {fillColor: '#1e6091'};
-			case 'praha-18': return {fillColor: '#f95738'};
+			case 'Praha 1':  return {fillColor: '#f94144'};
+			case 'Praha 2':  return {fillColor: '#f3722c'};
+			case 'Praha 3':  return {fillColor: '#f8961e'};
+			case 'Praha 4':  return {fillColor: '#f9844a'};
+			case 'Praha 5':  return {fillColor: '#f9c74f'};
+			case 'Praha 6':  return {fillColor: '#90be6d'};
+			case 'Praha 7':  return {fillColor: '#43aa8b'};
+			case 'Praha 8':  return {fillColor: '#4d908e'};
+			case 'Praha 9':  return {fillColor: '#577590'};
+			case 'Praha 10': return {fillColor: '#277da1'};
+			case 'Praha 16': return {fillColor: '#1e6091'};
+			case 'Praha 18': return {fillColor: '#f95738'};
 			
 		}
 	};
@@ -74,7 +74,8 @@ function main() {
 		$.ajax({
 			headers: {"X-Access-Token": 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphY29iZHZvcmFrY3pAZ21haWwuY29tIiwiaWQiOjE0NDUsIm5hbWUiOm51bGwsInN1cm5hbWUiOm51bGwsImlhdCI6MTY2MzcwNzIwNSwiZXhwIjoxMTY2MzcwNzIwNSwiaXNzIjoiZ29sZW1pbyIsImp0aSI6IjA5NzcyNzc4LTkxMzgtNDIyYS04NzNlLTdkOGE3MDA3MmQ2MCJ9.M-nYVbnEDmtGPQrMCiS-4EYHuzXAEohIRgCShxuS5W4'},
 			dataType: "json",
-			url: 'https://private-anon-64adaef85d-golemioapi.apiary-proxy.com/v2/sortedwastestations/?onlyMonitored=true',
+			url: 'https://api.golemio.cz/v2/sortedwastestations/?onlyMonitored=true',
+			//url: 'https://private-anon-64adaef85d-golemioapi.apiary-proxy.com/v2/sortedwastestations/?onlyMonitored=true',
 			success: function(data) {
 				console.log(data);
 
@@ -111,7 +112,8 @@ function main() {
 			$.ajax({
 				headers: {"X-Access-Token": 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphY29iZHZvcmFrY3pAZ21haWwuY29tIiwiaWQiOjE0NDUsIm5hbWUiOm51bGwsInN1cm5hbWUiOm51bGwsImlhdCI6MTY2MzcwNzIwNSwiZXhwIjoxMTY2MzcwNzIwNSwiaXNzIjoiZ29sZW1pbyIsImp0aSI6IjA5NzcyNzc4LTkxMzgtNDIyYS04NzNlLTdkOGE3MDA3MmQ2MCJ9.M-nYVbnEDmtGPQrMCiS-4EYHuzXAEohIRgCShxuS5W4'},
 				dataType: "json",
-				url: 'https://private-anon-64adaef85d-golemioapi.apiary-proxy.com/v2/sortedwastestations/measurements/'+query_str,
+				url: 'https://api.golemio.cz/v2/sortedwastestations/measurements/'+query_str,
+				//url: 'https://private-anon-64adaef85d-golemioapi.apiary-proxy.com/v2/sortedwastestations/measurements/'+query_str,
 				success: function(data) {
 					if (data[0] === undefined) {
 						console.log('This is undefined');
