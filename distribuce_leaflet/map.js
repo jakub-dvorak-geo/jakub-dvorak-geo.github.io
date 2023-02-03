@@ -72,7 +72,7 @@ function main() {
 	// get containers from api
 	function get_containers() {
 		$.ajax({
-			headers: {"X-Access-Token": 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphY29iZHZvcmFrY3pAZ21haWwuY29tIiwiaWQiOjE0NDUsIm5hbWUiOm51bGwsInN1cm5hbWUiOm51bGwsImlhdCI6MTY3NTQyNDM4NywiZXhwIjoxMTY3NTQyNDM4NywiaXNzIjoiZ29sZW1pbyIsImp0aSI6ImIzMmU4MGU1LTcwNjQtNGQzMS1iZDQ5LTk4ZjI2ZmNmYjQ2YyJ9.rUnyerwKPHyaoAfLDv0GFu9hD4phZnX-ABy2FKC6rxE'},
+			headers: {"Content-Type": 'application/json; charset=utf-8', "X-Access-Token": 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphY29iZHZvcmFrY3pAZ21haWwuY29tIiwiaWQiOjE0NDUsIm5hbWUiOm51bGwsInN1cm5hbWUiOm51bGwsImlhdCI6MTY3NTQyNDM4NywiZXhwIjoxMTY3NTQyNDM4NywiaXNzIjoiZ29sZW1pbyIsImp0aSI6ImIzMmU4MGU1LTcwNjQtNGQzMS1iZDQ5LTk4ZjI2ZmNmYjQ2YyJ9.rUnyerwKPHyaoAfLDv0GFu9hD4phZnX-ABy2FKC6rxE'},
 			dataType: "json",
 			url: 'https://api.golemio.cz/v2/sortedwastestations/?onlyMonitored=true',
 			//url: 'https://private-anon-64adaef85d-golemioapi.apiary-proxy.com/v2/sortedwastestations/?onlyMonitored=true',
@@ -105,12 +105,18 @@ function main() {
 	
 	//define popup functionality for containers
 	function onClick(e) {
-		popup_str = '<h4>Zaplněnost kontejnerů na adrese '+e.layer.feature.properties.name+':</h4><br><table>'
+		var popup_str = '<h4>Zaplněnost kontejnerů na adrese '+e.layer.feature.properties.name+':</h4><br><table>'
 
 		for (let container in e.layer.feature.properties.containers) {
-			query_str = '?containerId='+e.layer.feature.properties.containers[container].container_id+'&limit=1'
-			$.ajax({
-				headers: {"X-Access-Token": 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphY29iZHZvcmFrY3pAZ21haWwuY29tIiwiaWQiOjE0NDUsIm5hbWUiOm51bGwsInN1cm5hbWUiOm51bGwsImlhdCI6MTY3NTQyNDM4NywiZXhwIjoxMTY3NTQyNDM4NywiaXNzIjoiZ29sZW1pbyIsImp0aSI6ImIzMmU4MGU1LTcwNjQtNGQzMS1iZDQ5LTk4ZjI2ZmNmYjQ2YyJ9.rUnyerwKPHyaoAfLDv0GFu9hD4phZnX-ABy2FKC6rxE'},
+			//query_str = '?containerId='+e.layer.feature.properties.containers[container].container_id+'&limit=1'
+			
+			var d = new Date(e.layer.feature.properties.containers[container].last_measurement.measured_at_utc);
+			var popup_str = popup_str + '<tr><th>' + e.layer.feature.properties.containers[container].trash_type.description + 
+							'</th><th> <b>' + e.layer.feature.properties.containers[container].last_measurement.percent_calculated + '%</b> </th><th>' +
+							'(' + d.toLocaleString('cs') + ')</th></tr>'
+			e.layer.getPopup().setContent(popup_str + '</table>')
+			/*$.ajax({
+				headers: {"Content-Type": 'application/json; charset=utf-8', "X-Access-Token": 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphY29iZHZvcmFrY3pAZ21haWwuY29tIiwiaWQiOjE0NDUsIm5hbWUiOm51bGwsInN1cm5hbWUiOm51bGwsImlhdCI6MTY3NTQyNDM4NywiZXhwIjoxMTY3NTQyNDM4NywiaXNzIjoiZ29sZW1pbyIsImp0aSI6ImIzMmU4MGU1LTcwNjQtNGQzMS1iZDQ5LTk4ZjI2ZmNmYjQ2YyJ9.rUnyerwKPHyaoAfLDv0GFu9hD4phZnX-ABy2FKC6rxE'},
 				dataType: "json",
 				url: 'https://api.golemio.cz/v2/sortedwastestations/measurements/'+query_str,
 				//url: 'https://private-anon-64adaef85d-golemioapi.apiary-proxy.com/v2/sortedwastestations/measurements/'+query_str,
@@ -128,7 +134,7 @@ function main() {
 					};
 					e.layer.getPopup().setContent(popup_str + '</table>')
 				}
-			});
+			});*/
 		}
 		
 	}
