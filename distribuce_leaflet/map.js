@@ -58,6 +58,31 @@ function main() {
 			case 'Praha 16': return {fillColor: '#1e6091'};
 			case 'Praha 18': return {fillColor: '#f95738'};
 			
+			case 'Praha-1':  return {fillColor: '#f94144'};
+			case 'Praha-2':  return {fillColor: '#f3722c'};
+			case 'Praha-3':  return {fillColor: '#f8961e'};
+			case 'Praha-4':  return {fillColor: '#f9844a'};
+			case 'Praha-5':  return {fillColor: '#f9c74f'};
+			case 'Praha-6':  return {fillColor: '#90be6d'};
+			case 'Praha-7':  return {fillColor: '#43aa8b'};
+			case 'Praha-8':  return {fillColor: '#4d908e'};
+			case 'Praha-9':  return {fillColor: '#577590'};
+			case 'Praha-10': return {fillColor: '#277da1'};
+			case 'Praha-16': return {fillColor: '#1e6091'};
+			case 'Praha-18': return {fillColor: '#f95738'};
+			
+			case 'praha-1':  return {fillColor: '#f94144'};
+			case 'praha-2':  return {fillColor: '#f3722c'};
+			case 'praha-3':  return {fillColor: '#f8961e'};
+			case 'praha-4':  return {fillColor: '#f9844a'};
+			case 'praha-5':  return {fillColor: '#f9c74f'};
+			case 'praha-6':  return {fillColor: '#90be6d'};
+			case 'praha-7':  return {fillColor: '#43aa8b'};
+			case 'praha-8':  return {fillColor: '#4d908e'};
+			case 'praha-9':  return {fillColor: '#577590'};
+			case 'praha-10': return {fillColor: '#277da1'};
+			case 'praha-16': return {fillColor: '#1e6091'};
+			case 'praha-18': return {fillColor: '#f95738'};
 		}
 	};
 	var geojsonMarkerOptions = {
