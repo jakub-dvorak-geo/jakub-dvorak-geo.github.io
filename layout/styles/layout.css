@@ -323,15 +323,16 @@ input:focus, textarea:focus, *:required:focus{border-color:#FF3F4A !important;}
 
 /* Rows */
 .row0{color:#474747; background-color:#F4F4F4;}
-.row1{color:#FFFFFF; background-color:#FF3F4A;}
+.row1{color:#FFFFFF; background-color:#78a44f;}
 .row2{color:#474747; background-color:#F4F4F4;}
 .row3{color:#474747; background-color:#FFFFFF;}
 .row4{color:#A5A6AA; background-color:#27282E;}
-.row5, .row5 a{color:#A5A6AA; background-color:#1C1D21;}
+.row5, .row5 a{color:#FFFFFF; background-color:#78a44f;}
 
 
 /* Top Bar */
-#topbar #searchform{color:#FF3F4A;}
+/*#topbar #searchform{color:#FF3F4A;}*/
+#topbar #searchform{color:#bfee94;}
 #topbar #searchform:hover{}
 #topbar #searchform input{color:#FFFFFF; background:#A60009;}
 #topbar #searchform button{color:#FFFFFF; background:transparent;}
