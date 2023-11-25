@@ -373,9 +373,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#FF3F4A !important;}
 /* Navigation */
 #mainav{}
 #mainav li a{color:inherit; border-color:transparent;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#FFFFFF; background-color:#A60009;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#FFFFFF; background-color:#5F823F;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(255,63,74,.5);/* #FF3F4A */ border-color:rgba(255,63,74,.5);}
-#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#A60009; border-color:rgba(255,255,255,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#5F823F; border-color:rgba(255,255,255,.6);}
 #mainav form select{color:#474747; background-color:#FFFFFF;}
 
 #breadcrumb a{color:inherit; background-color:inherit;}
