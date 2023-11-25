@@ -1,9 +1,7 @@
 // Get the modal
-//var modal = document.getElementById("myModal");
 var modal = document.getElementsByClassName("modal");
 
 // Get the button that opens the modal
-//var btn = document.getElementById("myBtn");
 var btn = document.getElementsByClassName("btn-modal");
 
 // Get the <span> element that closes the modal
@@ -37,10 +35,10 @@ var modal_name_to_open = document.location.hash.substr(1);
 switch (modal_name_to_open) {
 	case "isprs_paper": modal[0].style.display = "block";
 	break;
-	case "msc_thesis": modal[1].style.display = "block";
+	case "msc_thesis": modal[0].style.display = "block";
 	break;
 	case "cnn_compare": modal[2].style.display = "block";
 	break;
-	case "bsc_thesis": modal[4].style.display = "block";
+	case "bsc_thesis": modal[6].style.display = "block";
 	break;
 }
