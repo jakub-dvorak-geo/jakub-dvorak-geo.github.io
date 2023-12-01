@@ -37,6 +37,8 @@ switch (modal_name_to_open) {
 	break;
 	case "msc_thesis": modal[0].style.display = "block";
 	break;
+	case "etrainee": modal[1].style.display = "block";
+	break;
 	case "cnn_compare": modal[2].style.display = "block";
 	break;
 	case "bsc_thesis": modal[6].style.display = "block";
