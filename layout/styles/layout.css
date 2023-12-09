@@ -65,7 +65,7 @@ File: Layout CSS
 /* Introblocks - x3
 --------------------------------------------------------------------------------------------------------------- */
 #introblocks{position:relative; z-index:1;}
-#introblocks > ul{display:block; margin:-180px 0 0; text-align:center;}/* 180px => 100px + container padding */
+#introblocks > ul{display:block; margin:-300px 0 0; text-align:center;}/* 180px => 100px + container padding */
 #introblocks article{display:block; padding:30px; text-align:center;}
 #introblocks article > a{}
 #introblocks article > a::after{display:block; width:100%; content:"";}/* Used to stop the two inline-block elements stacking next to each other */
@@ -318,7 +318,9 @@ input:focus, textarea:focus, *:required:focus{border-color:#FF3F4A !important;}
 .imgover:hover::before{background:rgba(0,0,0,.55);}
 .imgover, .imgover:hover::after{color:#FFFFFF;}
 
-.heading.underline::after{background-color:#A60009;}
+.heading.underline::after{background-color:#394e26;}
+
+#contacts i {color:  #b0b5b0;}
 
 
 /* Rows */
@@ -351,7 +353,7 @@ input:focus, textarea:focus, *:required:focus{border-color:#FF3F4A !important;}
 #introblocks article{color:#474747; background-color:#FFFFFF; box-shadow:0px 0px 15px rgba(0,0,0,.1);}
 #introblocks article:hover, #introblocks .active{color:#FFFFFF; background-color:#1C1D21;}
 #introblocks article i{border-color:rgba(0,0,0,.1);}
-#introblocks article:hover i, #introblocks .active i{color:#FFFFFF; background-color:#FF3F4A;}
+#introblocks article:hover i, #introblocks .active i{color:#FFFFFF; background-color:#5F823F;}
 
 
 /* Content Area */
@@ -377,6 +379,8 @@ input:focus, textarea:focus, *:required:focus{border-color:#FF3F4A !important;}
 #mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(255,63,74,.5);/* #FF3F4A */ border-color:rgba(255,63,74,.5);}
 #mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#5F823F; border-color:rgba(255,255,255,.6);}
 #mainav form select{color:#474747; background-color:#FFFFFF;}
+
+#mobilemenu {display:none; font-size:16pt;}
 
 #breadcrumb a{color:inherit; background-color:inherit;}
 #breadcrumb li:last-child a{color:#FF3F4A;}
@@ -413,7 +417,7 @@ table a, #comments a{background-color:inherit;}
 /* Max Wrapper Width - Laptop, Desktop etc.
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (min-width:1140px){
-	.hoc{max-width:1140px;}
+	.hoc{max-width:1083px;}
 }
 
 @media screen and (min-width:978px) and (max-width:1140px){
@@ -425,15 +429,39 @@ table a, #comments a{background-color:inherit;}
 --------------------------------------------------------------------------------------------------------------- */
 @media screen and (max-width:978px){
 	.hoc{max-width:90%;}
-
+	
+	.fl_left, .fl_right{display:block; float:none;}
+	
 	#topbar{}
 
-	#header{padding:30px 0;}
-	#header #logo{margin-top:0;}
+	/*#header{padding:30px 0;}
+	#header #logo{margin-top:0;}*/
 
 	#mainav{}
-	#mainav ul{display:none;}
-	#mainav form{display:block; margin-top:8px;}
+	/*#mainav ul{display:none;}
+	#mainav form{display:block; margin-top:8px;}*/
+	
+	#mainav li {display: none;}
+	#mobilemenu {
+		float: right;
+		display: block;
+		text-align: right;
+		padding: 40px 25px;
+		color: #FFFFFF;
+	}
+	#header #logo {
+		display: flex;
+        justify-content: space-between;
+        align-items: center;
+		margin-top:0;
+	}
+	
+	#header .responsive div(#logo) {float: none; display: block;}
+	#header .responsive li {float: none; display: block; text-align: right; clear: both;}
+	#mainav .responsive a:not(.active) {padding: 10px; background-color: #717274;}
+	#mainav .responsive a:not(.active):hover {background-color: #1C1D21;}
+	#mainav .responsive .active a {background-color: #1C1D21;}
+	#mainav ul.responsive {margin: 0px 0px 15px 0px}
 
 	#breadcrumb{}
 
@@ -450,16 +478,16 @@ table a, #comments a{background-color:inherit;}
 
 @media screen and (max-width:750px){
 	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
-	.fl_left, .fl_right{display:block; float:none;}
+	/*.fl_left, .fl_right{display:block; float:none;}*/
 	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
 	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0;}
 
 	#topbar{text-align:center;}
 	#topbar > div:first-of-type ul{margin:0 0 10px 0;}
 	#topbar #searchform{display:none;}/* This is personal preference - remove if not required */
-
+	
 	#header{text-align:center;}
-	#header #logo{margin:0 0 15px 0;}
+	/*#header #logo{margin:0 0 15px 0;}*/
 
 	#pageintro article, #pageintro article p{max-width:none;}
 	#pageintro .heading{font-size:2rem;}
@@ -494,6 +522,8 @@ table a, #comments a{background-color:inherit;}
 	.font-x2{font-size:1.6rem;}
 	.font-x3{font-size:1.8rem;}
 }
+
+
 
 .intro {
 	background-color: green;

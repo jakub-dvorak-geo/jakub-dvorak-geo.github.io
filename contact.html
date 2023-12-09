@@ -13,27 +13,21 @@ Licence URI: https://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-<style type="text/css">
-/* DEMO ONLY */
-.container .demo{text-align:center;}
-.container .demo div{padding:8px 0;}
-.container .demo div:nth-child(odd){color:#FFFFFF; background:#CCCCCC;}
-.container .demo div:nth-child(even){color:#FFFFFF; background:#979797;}
-@media screen and (max-width:900px){.container .demo div{margin-bottom:0;}}
-/* DEMO ONLY */
-</style>
 </head>
 
 
 <body id="top">
 
 <div class="wrapper row1">
-  <header id="header" class="hoc clear">
+  <header id="header" class="hoc clear my_nav">
     <div id="logo" class="fl_left"> 
       <h1><a href="index.html">Jakub Dvořák</a></h1>
+	  <a href="javascript:void(0);" id="mobilemenu" class="fl_right" onclick="open_mobile_menu()">
+		<i class="fa fa-bars"></i>
+	  </a>
     </div>
     <nav id="mainav" class="fl_right"> 
-      <ul class="clear">
+      <ul id="nav_list" class="clear my_nav">
         <li><a href="index.html">Home</a></li>
 		<li><a href="about_me.html">About me</a></li>
 		<li><a href="portfolio.html">Portfolio</a></li>
@@ -50,29 +44,29 @@ Licence URI: https://www.os-templates.com/template-terms
 
 <div class="wrapper row3">
   <main class="hoc container clear"> 
-    <div class="content"> 
+    <div id="contacts" class="content"> 
       <!-- ################################################################################################ -->
       <h2>Feel free to reach out:</h2>
       <!-- ################################################################################################ -->
       <div class="group btmspace-30 demo" style="font-size: 20pt">
-        <a href="https://github.com/jakub-dvorak-geo">
+        <a href="https://github.com/jakub-dvorak-geo" title="Github">
 			<div class="one_half first">
 				<i class="fab fa-github fa-10x"></i>
 			</div>
 		</a>
-        <a href="https://www.linkedin.com/in/jakub-dvořák-8445a129b">
+        <a href="https://www.linkedin.com/in/jakub-dvořák-8445a129b" title="LinkedIn">
 			<div class="one_half">
 				<i class="fab fa-linkedin-in fa-10x"></i>
 			</div>
 		</a>
       </div>
 	  <div class="group btmspace-80 demo" style="font-size: 20pt">
-        <a href="mailto:jacobdvorakcz@gmail.com">
+        <a href="mailto:jacobdvorakcz@gmail.com" title="Email">
 			<div class="one_half first">
 				<i class="fa fa-envelope fa-10x"></i>
 			</div>
 		</a>
-        <a href="https://orcid.org/0000-0001-7845-7738">
+        <a href="https://orcid.org/0000-0001-7845-7738" title="OrcID">
 			<div class="one_half">
 				<i class="fab fa-orcid fa-10x"></i>
 			</div>
@@ -122,8 +116,9 @@ Licence URI: https://www.os-templates.com/template-terms
 
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="../layout/scripts/jquery.min.js"></script>
-<script src="../layout/scripts/jquery.backtotop.js"></script>
-<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/responsive_design.js"></script>
 </body>
 </html>
