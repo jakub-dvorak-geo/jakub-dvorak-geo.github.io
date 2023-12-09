@@ -19,12 +19,15 @@ Licence URI: https://www.os-templates.com/template-terms
 <body id="top">
 
 <div class="wrapper row1">
-  <header id="header" class="hoc clear">
+  <header id="header" class="hoc clear my_nav">
     <div id="logo" class="fl_left"> 
       <h1><a href="index.html">Jakub Dvořák</a></h1>
+	  <a href="javascript:void(0);" id="mobilemenu" class="fl_right" onclick="open_mobile_menu()">
+		<i class="fa fa-bars"></i>
+	  </a>
     </div>
     <nav id="mainav" class="fl_right"> 
-       <ul class="clear">
+       <ul id="nav_list" class="clear my_nav">
         <li><a href="index.html">Home</a></li>
 		<li class="active"><a href="about_me.html">About me</a></li>
 		<li><a href="portfolio.html">Portfolio</a></li>
@@ -183,8 +186,8 @@ Licence URI: https://www.os-templates.com/template-terms
 
 <a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
 <!-- JAVASCRIPTS -->
-<script src="../layout/scripts/jquery.min.js"></script>
-<script src="../layout/scripts/jquery.backtotop.js"></script>
-<script src="../layout/scripts/jquery.mobilemenu.js"></script>
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/responsive_design.js"></script>
 </body>
 </html>
