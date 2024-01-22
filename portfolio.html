@@ -48,7 +48,7 @@ Licence URI: https://www.os-templates.com/template-terms
     <!-- main body -->
     <!-- ################################################################################################ -->
     <div class="content"> 
-	  <header class="heading">Some of my past projects</header>
+	  <!--<header class="heading">Some of my projects</header>-->
       <!-- ################################################################################################ -->
       <div id="gallery">
         <figure>
@@ -81,10 +81,10 @@ Licence URI: https://www.os-templates.com/template-terms
 							should focus on other aspects of the system, such as SAR-optical fusion and the detection
 							algorithm.</p>
 							</div>
-							<p><b>Skills:</b> SAR data processing, time series analysis, programming</p>
+							<p><b>Skills:</b> SAR processing, time series analysis, programming</p>
 							<p><b>Tools:</b> Python (pyroSAR, sentinelsat), SNAP, QField</p>
-							<p><b>Data:</b> Sentinel 1 SLC, Lidar-based DSM, Field-collected reference data</p>
-							<p><b>Master's thesis:</b> <a href="http://hdl.handle.net/20.500.11956/185617">http://hdl.handle.net/20.500.11956/185617</a></p>
+							<p><b>Data:</b> Sentinel-1 SLC, Lidar-based DSM, Field-collected reference data</p>
+							<p><b>Thesis:</b> <a href="http://hdl.handle.net/20.500.11956/185617">http://hdl.handle.net/20.500.11956/185617</a></p>
 							<p><b>Github repo:</b> <a href="https://github.com/jakub-dvorak-geo/MastersThesis_GrasslandMowingMonitoring">https://github.com/jakub-dvorak-geo/MastersThesis_GrasslandMowingMonitoring</a></p>
 							</div>
 						</div>
@@ -132,10 +132,10 @@ Licence URI: https://www.os-templates.com/template-terms
 							<h3>Weakly supervised learning in the treeline ecotone</h3>
 							<p><b>2022</b></p>
 							<div class="justified">
-							<p>To reduce training data requirements, two approaches can be followed – either pretraining models on larger datasets
-							or augmenting the available training data. However, these commonly used strategies do not fully resolve the lack of
-							training data for land cover classification in RS. Our goal was to classify trees and shrubs from aerial orthoimages
-							in the treeline ecotone of the Krkonoše Mountains, Czechia. Instead of training a
+							<p>To reduce training data needs for Deep Learning, two approaches are most common – either pretraining models on larger datasets
+							or augmenting the available training data. However, these commonly-used strategies are not enough for land cover classification
+							in RS. Our goal was to classify trees and shrubs from aerial orthoimages in the treeline ecotone of Krkonoše Mountains National Park, and 
+							Jeseníky Protected Landscape Area, Czechia. Instead of training a
 							model on a smaller, human-labelled dataset, we semiautomatically created training data using an ancillary normalised Digital Surface
 							Model (nDSM) and image spectral information. This approach can complement existing techniques, trading accuracy for a larger
 							labelled dataset while assuming that the classifier can handle the training data noise. Weakly supervised learning on a CNN led to
@@ -166,10 +166,10 @@ Licence URI: https://www.os-templates.com/template-terms
 					<div class="modal-content">
 						<span class="close">&times;</span>
 						<div class="modal-grid">
-							<img class="img-modal" src="media/img/portfolio/modal/modal_placeholder.png" alt="">
+							<img class="img-modal" src="media/img/portfolio/modal/modal_cnncompare.png" alt="">
 							<div class="txt-modal">
 							<h3>CNN Compare – classification of hyperspectral data</h3>
-							<p><b>2021–2022</b></p>
+							<p><b>2021–2023</b></p>
 							<div class="justified">
 							<p>Utilization of convolutional neural networks (CNN) has been growing rapidly in many fields, including remote sensing.
 							At the same time, several textbooks and online learning materials have appeared. What is not so frequent or missing,
@@ -185,6 +185,7 @@ Licence URI: https://www.os-templates.com/template-terms
 							<p><b>Skills:</b> Neural Network architecture, Programming</p>
 							<p><b>Tools:</b> Python (Pytorch)</p>
 							<p><b>Data:</b> Aerial/UAV hyperspectral imagery (but compatible with any GDAL-readable rasters)</p>
+							<p><b>ISPRS CATCON Awards:</b> <a href="https://www.isprs.org/catcon/catcon8.aspx">isprs.org/catcon/catcon8.aspx</a></p>
 							<!--<p><b>Github Repo:</b> <a href="https://github.com/jakub-dvorak-geo/ETRAINEE-ClassifierComparison">https://github.com/jakub-dvorak-geo/ETRAINEE-ClassifierComparison</a></p>-->
 							</div>
 						</div>
@@ -218,30 +219,36 @@ Licence URI: https://www.os-templates.com/template-terms
 			</li>
 
             <li class="one_third_true" title="Creating yearly Best Available Pixel composites of Landsat/Sentinel-2 data">
-				<button class="btn-modal" id="myBtn"><img src="media/img/portfolio/tiles/tile_placeholder.png" /></button>
+				<button class="btn-modal" id="myBtn"><img src="media/img/portfolio/tiles/tile_BAP.png" /></button>
 				<!-- The Modal -->
 				<div id="myModal" class="modal">
 				<!-- Modal content -->
 					<div class="modal-content">
 						<span class="close">&times;</span>
 						<div class="modal-grid">
-							<img class="img-modal" src="media/img/portfolio/modal/modal_placeholder.png" alt="">
+							<img class="img-modal" src="media/img/portfolio/modal/modal_BAP.png" alt="">
 							<div class="txt-modal">
 							<h3>Creating yearly Best Available Pixel composites of Landsat/Sentinel-2 data</h3>
 							<p><b>2023</b></p>
 							<div class="justified">
-							<p>Some text in the Modal.. 
-							a lot of text actually.. 
-							cant think of anything else 
-							hello world 
-							Iorem ipsum?</p>
+							<p>As part of a research project studying long-term hydrological changes in upper Úpa basin
+							in Krkonoše mountains, Czechia. My team analysed land cover change in the basin based on the
+							Landsat/Sentinel data acquired between 1984 and 2022.</p>
+							
+							<p>My main contribution towards this project was creating yearly composites and deriving
+							features which served as input for classification. Initially, I built a procedure to create
+							the composites in GEE, but for some more problematic years, the results were not satisfactory
+							and further data manipulation in GEE was impractical. So to avoid that challenge, I created
+							the final composites with a series of Python and R scripts.</p>
 						
-							<p>My scripts were subsequently used by MSc students at Charles University.</p>
+							<p>The R scripts for compositing were based on an exercise in the Earth Observation course
+							I took at Humboldt University, Berlin. The My scripts were subsequently used by MSc students
+							at Charles University.</p>
 							</div>
-							<p><b>Skills:</b> programming, remote sensing</p>
-							<p><b>Tools:</b> Python (PyTorch), QGIS</p>
+							<p><b>Skills:</b> Programming, Remote Sensing, Time Series Analysis</p>
+							<p><b>Tools:</b> Python, R, GEE</p>
 							<p><b>Data:</b> Landsat 5-8, Sentinel-2</p>
-							<p><b>Github repository:</b> <a href="https://github.com/jakub-dvorak-geo/LandsatSentinel-preprocessing">https://github.com/jakub-dvorak-geo/LandsatSentinel-preprocessing</a></p>
+							<p><b>Github repo:</b> <a href="https://github.com/jakub-dvorak-geo/LandsatSentinel-preprocessing">https://github.com/jakub-dvorak-geo/LandsatSentinel-preprocessing</a></p>
 							</div>
 						</div>
 					</div>
@@ -262,13 +269,25 @@ Licence URI: https://www.os-templates.com/template-terms
 							<h3>Bachelor thesis on Deep learning classification in Remote Sensing</h3>
 							<p><b>2020</b></p>
 							<div class="justified">
-							<p>Krkonoše National Park administration is interested in analysing changes</p>
-							<p>This project came about as my bachelor thesis, my advisor was Ing. Markéta Potůčková Ph.D. and the opponenture was led by Prof. Sébastien Lefèvre.</p>
+							<p>Deep Learning has become widely used in the remote sensing community, especially as a
+							classifier. First part of this thesis described deep neural networks commonly
+							used for remote sensing classification and their various applications.</p>
+							<p>In the practical portion of my thesis, I used two deep
+							convolutional Encoder-Decoder networks – U-Net and its proposed adaptation
+							"KrakonosNet". They were used to perform a sematic segmentation of spruce trees and dwarf
+							pine shrubs in the tree line ecotone of the Krkonoše Mountains, Czechia, based on aerial orthoimagery.</p>
+							<p>Resulting classification were compared to other common classifiers,
+							namely Maximum Likelihood, Random Forest, and a Support Vector Machine.
+							Both U-Net and KrakonosNet significantly outperformed the other classifiers on this dataset,
+							and KrakonosNet was more succesful than a basic U-Net.</p>
 							</div>
 							<p><b>Skills:</b> Remote Sensing, ML/DL classification, Programming</p>
 							<p><b>Tools:</b> Python (scikit-learn, PyTorch), QGIS</p>
 							<p><b>Data:</b> Aerial imagery (RGB + NIR), Lidar-based nDSM</p>
-							<p><b>Website:</b> <a href="https://dspace.cuni.cz/handle/20.500.11956/120388?locale-attribute=en">https://hdl.handle.net/20.500.11956/120388</a></p>
+							<p><b>Thesis:</b> <a href="https://dspace.cuni.cz/handle/20.500.11956/120388?locale-attribute=en">https://hdl.handle.net/20.500.11956/120388</a></p>
+							<p><b>Thesis advisor:</b> <a href="">Dr. Markéta Potůčková</a></p>
+							<p><b>Thesis opponent:</b> <a href="">Prof. Sébastien Lefèvre</a></p>
+							<!--<p><b>Github repo:</b> <a href=""></a></p>-->
 							</div>
 						</div>
 					</div>
@@ -310,7 +329,7 @@ Licence URI: https://www.os-templates.com/template-terms
 							<p><b>Skills:</b> Teamwork, Remote Sensing, Programming</p>
 							<p><b>Tools:</b> Google Earth Engine (Javascript API)</p>
 							<p><b>Data:</b> MODIS, Landsat 5/8, ERA5 (precipitation)</p>
-							<p><b>Project repository:</b> </p>					
+							<!--<p><b>Project repository:</b> </p>-->
 							</div>
 						</div>
 					</div>
