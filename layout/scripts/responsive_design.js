@@ -21,7 +21,6 @@ function open_mobile_menu() {
 function set_div_size_to_largest() {
 	// Get all elements with class 'box'
     var elements = document.getElementsByClassName('box');
-	console.log(elements)
 
     var maxHeight = 0;
 
@@ -34,7 +33,6 @@ function set_div_size_to_largest() {
         if (height > maxHeight) {
             maxHeight = height;
         }
-		console.log(maxHeight)
     }
 
     // Set the maximum height to all elements
@@ -43,3 +41,4 @@ function set_div_size_to_largest() {
         element.style.height = maxHeight + 'px';
     }
 }
+set_div_size_to_largest();
