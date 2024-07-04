@@ -1,0 +1,44 @@
+.partner_logos {
+    display: flex;
+    align-items: center;
+    max-height: 150px;
+}
+
+.partner_logos a {
+    flex: 33.3%;
+    padding: 25px;
+    margin: 25px;
+}
+
+.partner_logos img {
+}
+
+.btn-secondary {
+    background-color: #84aab0;
+}
+
+.btn-secondary:hover {
+    background-color: #6c8793;
+}
+
+.product_switch div {
+    background-color: #84aab0;
+    border-color: #6c757d;
+    color: #fff;
+}
+
+.download_btn {
+    font-size: 22pt;
+    color: #758887;
+}
+
+.download_btn:hover {
+    color: #84aab0;
+}
+
+.product_desc {
+    text-align: justify;
+    font-size: 10pt;
+    line-height: 1.5;
+    margin-top: 10px;
+}
