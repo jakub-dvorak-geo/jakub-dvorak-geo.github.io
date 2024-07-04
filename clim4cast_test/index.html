@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Clim4 Cast | </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"/>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-style.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/clim4cast_custom.css">
+  </head>
+
+  <body>
+    <!-- Hlavička -->
+    <header class="tm-nav-section row col-12">
+      <nav class="container navbar navbar-expand-md navbar-light" style="align-items: center;">
+        <!--<a title="Project website" href="https://www.interreg-central.eu/projects/clim4cast/">-->
+          <img src="media/logo/Clim4Cast_Logo_Standard.svg"
+            alt="Interreg Central Europe - Co-funded by the European Union"
+            style="width:40%; margin-right:5%" href="https://www.interreg-central.eu/projects/clim4cast/" />
+        <!--</a>-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#tmMainNav"
+          aria-controls="tmMainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="tmMainNav">
+          <ul class="navbar-nav mx-auto tm-navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#drought">Drought</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#heatwave">Heatwave</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#wildfire">Wildfire</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#partners">Partners</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Drought -->
+    <div class="container tm-features-section" id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="tm-parallax">
+              <header class="tm-parallax-header">
+                <h2 class="">Drought</h2>
+              </header>
+            </div>
+          </div>
+        </div>
+        <div class="row tm-features-row" id="drought">
+          <section class="container tm-company-section">
+            <div class="product_switch">
+              <div>Drought intensity</div>
+              <div>Soil moisture deficit</div>
+              <div>Relative soil saturation</div>
+            </div>
+            <div class="btn-group d-flex" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWP_40">0-40cm</button>
+              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWP_100">0-100cm</button>
+              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWP_200">0-200cm</button>
+              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWD_40">0-40cm</button>
+              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWD_100">0-100cm</button>
+              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWD_200">0-200cm</button>
+              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWR_40">0-40cm</button>
+              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWR_100">0-100cm</button>
+              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWR_200">0-200cm</button>
+            </div>
+            <img id="drought_fig" width=100% alt="Please accept our apology, model outputs are currently unavailable."/>
+            <div class="btn-group d-flex" role="group" aria-label="Basic example">
+              <a id="drought_download" class="btn btn-secondary w-100" download>
+                  <i class="fa fa-download"></i> Most recent
+              </a>
+              <a id="drought_download_old" class="btn btn-secondary w-100" download>
+                <i class="fa fa-download"></i> Last week
+              </a>
+            </div>
+            <p class="product_desc" id="drought_desc"></p>
+            <h3>Partner products</h3>
+            <div class="partner_logos" id="drought_partners">TODO: TABULKA S LINKAMA K PARTNERUM</div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Heatwave -->
+    <div class="container tm-features-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="tm-parallax-2">
+              <header class="tm-parallax-header">
+                <h2 class="">Heatwave</h2>
+              </header>
+            </div>
+          </div>
+        </div>
+        <div class="row tm-features-row" id="heatwave">
+          <section class="container tm-company-section">
+            <div class="btn-group d-flex" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary w-100" name="heatwave_btns" value="HI">Heat Index</button>
+              <button type="button" class="btn btn-secondary w-100" name="heatwave_btns" value="UTCI">Universal Thermal Climate Index</button>
+            </div>
+            <img id="heatwave_fig" width=100% alt="Please accept our apology, model outputs are currently unavailable."/>
+            <div class="btn-group d-flex" role="group" aria-label="Basic example">
+              <a id="heatwave_download" class="btn btn-secondary w-100" download>
+                  <i class="fa fa-download"></i> Most recent
+              </a>
+              <a id="heatwave_download_old" class="btn btn-secondary w-100" download>
+                <i class="fa fa-download"></i> Last week
+              </a>
+            </div>
+            <p class="product_desc" id="heatwave_desc"></p>
+            <h3>Partner products</h3>
+            <div class="partner_logos" id="heatwave_partners">TODO: TABULKA S LINKAMA K PARTNERUM</div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wildfire -->
+    <div class="container tm-features-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="tm-parallax-3">
+              <header class="tm-parallax-header">
+                <h2 class="">Wildfire</h2>
+              </header>
+            </div>
+          </div>
+        </div>
+        <div class="row tm-features-row" id="wildfire">
+          <section class="container tm-company-section">
+            <div class="btn-group d-flex" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-secondary w-100" name="wildfire_btns" value="FWI">Fire Spread</button>
+              <button type="button" class="btn btn-secondary w-100" name="wildfire_btns" value="DFM10h">Fuel moisture</button>
+            </div>
+            <img id="wildfire_fig" width=100% alt="Please accept our apology, model outputs are currently unavailable."/>
+            <div class="btn-group d-flex" role="group" aria-label="Basic example">
+              <a id="wildfire_download" class="btn btn-secondary w-100" download>
+                  <i class="fa fa-download"></i> Most recent
+              </a>
+              <a id="wildfire_download_old" class="btn btn-secondary w-100" download>
+                <i class="fa fa-download"></i> Last week
+              </a>
+            </div>
+            <p class="product_desc" id="wildfire_desc"></p>
+            <h3>Partner products</h3>
+            <div class="partner_logos" id="wildfire_partners">TODO: TABULKA S LINKAMA K PARTNERUM</div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tým projektu -->
+    <!-- Projektové týmy -->
+    <section class="container tm-company-section" id="partners">
+      <div class="row">
+        <div class="col-12">
+          <div class="tm-parallax-4">
+            <header class="tm-parallax-header">
+              <h2 class="">Project partners</h2>
+            </header>
+          </div>
+        </div>
+      </div>
+      <a href="https://www.interreg-central.eu/projects/clim4cast/"><img src="media/logo/Clim4Cast_Logo_Standard.svg" width="55%" style="margin-right: 9%;" /></a>
+      <img src="media/map/map.png" width="35%"/>
+      <div class="section-heading">
+        <span>These organizations have participated on the project:</span>
+      </div>
+      <div class="partner_logos">
+        <a title="CzechGlobe" href="https://www.czechglobe.cz/">
+          <img src="media/logo/EN_logo_CzechGlobe_transparent.png" width="100%" />
+        </a>
+        <a title="MUNI" href="">
+          <img src="media/logo/muni-lg-eng-rgb.png" style="width:100%" />
+        </a>
+        <a title="TUW" href="">
+          <img src="media/logo/TU_Wien_GEO_Logo.png" style="width:100%" />
+        </a>
+        <a title="IUNG" href="">
+          <img src="media/logo/IUNG_EN_transparent.png" style="width:100%" />
+        </a>
+      </div><div class="partner_logos">
+        <a title="SHMI" href="">
+          <img src="media/logo/SHMU.svg" style="width:100%" />
+        </a>
+        <a title="ZALF" href="">
+          <img src="media/logo/ZALF_Logo.png" style="width:100%" />
+        </a>
+        <a title="DHMZ" href="">
+          <img src="media/logo/DHMZ logo.png" style="width:100%" />
+        </a>
+        <a title="ARSO" href="">
+          <img src="media/logo/ARSO_meteo.png" style="width:100%" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Patička -->
+    <footer class="tm-footer">
+      <div class="row tm-footer-row">
+        <p class="col-md-10 col-sm-12 mb-0">
+          Copyright &copy; 2024 Global Change Research Institute CAS.:
+          <a rel="nofollow" href="https://www.czechglobe.cz/en/" class="tm-footer-link" target="_blank">Czechglobe</a>
+        </p>
+      </div>
+      <div class="row tm-footer-row">
+        <p class="col-md-10 col-sm-12 mb-0">
+          Project website: <a class="tm-footer-link" href="https://www.interreg-central.eu/projects/clim4cast/">https://www.interreg-central.eu/projects/clim4cast/</a>
+        </p>
+      </div>
+      <div class="row tm-footer-row">
+        <p class="col-md-10 col-sm-12 mb-0">
+          Contact: <a href="https://www.czechglobe.cz/en/contacts/1473/" class="tm-footer-link">Bc. Markéta Poděbradská Ph.D.</a> 
+          | <a href="mailto:podebradska.m@czechglobe.cz" class="tm-footer-link">podebradska.m@czechglobe.cz</a>
+        </p>
+        <div class="col-md-2 col-sm-12 scrolltop">
+          <div class="scroll icon"><i class="fa fa-4x fa-angle-up"></i></div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Woodoo magic stuff -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <!-- Single Page Nav plugin works with this version of jQuery -->
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/clim4cast_custom.js"></script>
+  </body>
+</html>
