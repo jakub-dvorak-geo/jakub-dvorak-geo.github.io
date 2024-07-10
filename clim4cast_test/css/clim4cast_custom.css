@@ -1,16 +1,18 @@
+#nav_logo {
+    width: 35%;
+    margin-right:5%;
+}
+
 .partner_logos {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    max-height: 150px;
 }
 
 .partner_logos a {
-    flex: 33.3%;
+    width: 50%;
     padding: 25px;
-    margin: 25px;
-}
-
-.partner_logos img {
+    min-height: 50px;
 }
 
 .btn-secondary {
@@ -20,6 +22,29 @@
 .btn-secondary:hover {
     background-color: #6c8793;
 }
+
+
+.drought_btn_container {
+    flex-direction: row;
+    width: 100%;
+}
+
+.drought_btn_group {
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+	.drought_btn_group {
+		flex-direction: row;
+	}
+
+    .partner_logos a {
+        width: 25%;
+        padding: 25px;
+    }
+}
+
 
 .product_switch div {
     background-color: #84aab0;
@@ -41,4 +66,33 @@
     font-size: 10pt;
     line-height: 1.5;
     margin-top: 10px;
+}
+
+#partners_overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#project_link {
+    width: 60%;
+    max-width: 600px;
+}
+
+#map {
+    min-height: 300px;
+    width: 35%;
+    aspect-ratio: 3 / 4;
+    background-color: #94bec4;
+}
+
+.popupContent {
+    min-width: 150px;
+    min-height: 100px;
+    line-height: 1.5;
+}
+
+#windy {
+    width: 100%;
+    min-height: 400px;
 }
