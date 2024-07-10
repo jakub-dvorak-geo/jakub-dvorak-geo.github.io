@@ -275,8 +275,10 @@ body {
 
 .tm-footer {
 	color: #666;
-	padding-top: 40px;
+	padding: 40px;
 	background-color: #c3d3d7;
+	margin-top: 20px;
+	margin-bottom: 0px;
 }
 
 #google-map {
@@ -561,6 +563,10 @@ figure.effect-bubba:hover p {
 	}
 
 	.grid figure figcaption { padding: 2em;	}
+
+	.drought_btn_group {
+		flex-direction: row;
+	}
 }
 
 @media (min-width: 1200px) {

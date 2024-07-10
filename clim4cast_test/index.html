@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Clim4 Cast | </title>
+    <title>Clim4Cast forecast</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"/>
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/tooplate-style.css" />
     <link rel="stylesheet" href="css/templatemo-style.css">
     <link rel="stylesheet" href="css/clim4cast_custom.css">
+    <link rel="stylesheet" href="css/leaflet.css">
   </head>
 
   <body>
@@ -18,9 +19,10 @@
     <header class="tm-nav-section row col-12">
       <nav class="container navbar navbar-expand-md navbar-light" style="align-items: center;">
         <!--<a title="Project website" href="https://www.interreg-central.eu/projects/clim4cast/">-->
-          <img src="media/logo/Clim4Cast_Logo_Standard.svg"
+          <img id="nav_logo"
+            src="media/logo/Clim4Cast_Logo_Standard.svg"
             alt="Interreg Central Europe - Co-funded by the European Union"
-            style="width:40%; margin-right:5%" href="https://www.interreg-central.eu/projects/clim4cast/" />
+            href="https://www.interreg-central.eu/projects/clim4cast/" />
         <!--</a>-->
         <button
           class="navbar-toggler"
@@ -36,6 +38,9 @@
 
         <div class="collapse navbar-collapse" id="tmMainNav">
           <ul class="navbar-nav mx-auto tm-navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#drought">Drought</a>
             </li>
@@ -53,12 +58,28 @@
       </nav>
     </header>
 
-    <!-- Drought -->
+    <!-- Windy API -->
     <div class="container tm-features-section" id="home">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="tm-parallax">
+              <header class="tm-parallax-header">
+                <h2 class="">Windy API</h2>
+              </header>
+            </div>
+          </div>
+        </div>
+        <div id="windy"><img src="media/map/windy_temp.jpg" width="100%" title="Future interactive map, currently in development"/></div>
+      </div>
+    </div>
+
+    <!-- Drought -->
+    <div class="container tm-features-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="tm-parallax-2">
               <header class="tm-parallax-header">
                 <h2 class="">Drought</h2>
               </header>
@@ -72,16 +93,20 @@
               <div>Soil moisture deficit</div>
               <div>Relative soil saturation</div>
             </div>
-            <div class="btn-group d-flex" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWP_40">0-40cm</button>
-              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWP_100">0-100cm</button>
-              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWP_200">0-200cm</button>
-              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWD_40">0-40cm</button>
-              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWD_100">0-100cm</button>
-              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWD_200">0-200cm</button>
-              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWR_40">0-40cm</button>
-              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWR_100">0-100cm</button>
-              <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWR_200">0-200cm</button>
+            <div class="btn-group d-flex drought_btn_container" role="group" aria-label="Basic example">
+              <div class="d-flex drought_btn_group">
+                <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWP_40">0-40cm</button>
+                <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWP_100">0-100cm</button>
+                <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWP_200">0-200cm</button>
+              </div><div class="d-flex drought_btn_group">
+                <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWD_40">0-40cm</button>
+                <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWD_100">0-100cm</button>
+                <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWD_200">0-200cm</button>
+              </div><div class="d-flex drought_btn_group">
+                <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWR_40">0-40cm</button>
+                <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWR_100">0-100cm</button>
+                <button type="button" class="btn btn-secondary w-100" name="drought_btns" value="AWR_200">0-200cm</button>
+              </div>
             </div>
             <img id="drought_fig" width=100% alt="Please accept our apology, model outputs are currently unavailable."/>
             <div class="btn-group d-flex" role="group" aria-label="Basic example">
@@ -105,7 +130,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="tm-parallax-2">
+            <div class="tm-parallax-3">
               <header class="tm-parallax-header">
                 <h2 class="">Heatwave</h2>
               </header>
@@ -140,7 +165,7 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="tm-parallax-3">
+            <div class="tm-parallax-4">
               <header class="tm-parallax-header">
                 <h2 class="">Wildfire</h2>
               </header>
@@ -175,42 +200,46 @@
     <section class="container tm-company-section" id="partners">
       <div class="row">
         <div class="col-12">
-          <div class="tm-parallax-4">
+          <div class="tm-parallax-5">
             <header class="tm-parallax-header">
               <h2 class="">Project partners</h2>
             </header>
           </div>
         </div>
       </div>
-      <a href="https://www.interreg-central.eu/projects/clim4cast/"><img src="media/logo/Clim4Cast_Logo_Standard.svg" width="55%" style="margin-right: 9%;" /></a>
-      <img src="media/map/map.png" width="35%"/>
+      <div id="partners_overview">
+        <a id="project_link" href="https://www.interreg-central.eu/projects/clim4cast/" title="Project website">
+          <img src="media/logo/Clim4Cast_Logo_Standard.svg" />
+        </a>
+        <div id="map"></div>
+      </div>
       <div class="section-heading">
         <span>These organizations have participated on the project:</span>
       </div>
       <div class="partner_logos">
         <a title="CzechGlobe" href="https://www.czechglobe.cz/">
-          <img src="media/logo/EN_logo_CzechGlobe_transparent.png" width="100%" />
+          <img src="media/logo/EN_logo_CzechGlobe_transparent.png" style="width:100%" />
         </a>
-        <a title="MUNI" href="">
+        <a title="Masaryk University" href="https://www.muni.cz/en">
           <img src="media/logo/muni-lg-eng-rgb.png" style="width:100%" />
         </a>
-        <a title="TUW" href="">
+        <a title="dept. of Geodesy and Geoinformation, TU Wien" href="https://www.tuwien.at/en/mg/geo">
           <img src="media/logo/TU_Wien_GEO_Logo.png" style="width:100%" />
         </a>
-        <a title="IUNG" href="">
+        <a title="Polish Institute of Soil Science and Plant Cultivation" href="https://en.iung.pl/">
           <img src="media/logo/IUNG_EN_transparent.png" style="width:100%" />
         </a>
-      </div><div class="partner_logos">
-        <a title="SHMI" href="">
+      <!--/div><div class="partner_logos">-->
+        <a title="Slovak Hydrometeorological Institute" href="https://www.shmu.sk/en">
           <img src="media/logo/SHMU.svg" style="width:100%" />
         </a>
-        <a title="ZALF" href="">
+        <a title="ZALF" href="https://www.zalf.de/en">
           <img src="media/logo/ZALF_Logo.png" style="width:100%" />
         </a>
-        <a title="DHMZ" href="">
+        <a title="Croatian Meteorological and Hydrological Service" href="https://meteo.hr/index_en.php">
           <img src="media/logo/DHMZ logo.png" style="width:100%" />
         </a>
-        <a title="ARSO" href="">
+        <a title="ARSO meteo, Slovenian Environmental Agency" href="https://meteo.arso.gov.si/met/en">
           <img src="media/logo/ARSO_meteo.png" style="width:100%" />
         </a>
       </div>
@@ -246,6 +275,10 @@
     <script src="js/jquery.singlePageNav.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://api.windy.com/assets/map-forecast/libBoot.js"></script>
+    <!--<script src="js/windy_map.js"></script>-->
+    <!--script src="js/leaflet.js"></script-->
     <script src="js/clim4cast_custom.js"></script>
   </body>
 </html>
