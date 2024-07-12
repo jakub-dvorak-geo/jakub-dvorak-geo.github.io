@@ -101,22 +101,23 @@ function getPartnerLinks(fig_type) {
   switch (fig_type) {
     case "drought":
       return [
-        {icon: "media/logo/EN_logo_CzechGlobe_transparent.png", url: "https://www.intersucho.cz/"},
-        {icon: "media/logo/TU_Wien-Logo.svg", url: "https://dataviewer.geo.tuwien.ac.at/"},
-        {icon: "media/logo/TU_Wien-Logo.svg", url: "https://www.zamg.ac.at/incaanalyse"},
-        {icon: "media/logo/DHMZ logo.png", url: "https://meteo.hr/klima_e.php?section=klima_pracenje&param=spi"},
+        {icon: "EN_logo_CzechGlobe_transparent.png", url: "https://www.intersucho.cz/", title: "Intersucho"},
+        {icon: "TU_Wien_GEO_Logo.png", url: "https://dataviewer.geo.tuwien.ac.at/", title: "TU Wien DataViewer"},
+        {icon: "geosphere_logo.svg", url: "https://www.zamg.ac.at/incaanalyse", title: "GeoSphere Austria"},
+        {icon: "IUNG_EN_transparent.png", url: "https://susza.iung.pulawy.pl/en/index/", title: "ADMS - Agricultural Drought Monitoring System"},
+        {icon: "DHMZ logo.png", url: "https://meteo.hr/klima_e.php?section=klima_pracenje&param=spi", title: "Croatian cumulative precipitation"},
+        {icon: "logo SHMU 600.jpg", url: "https://www.shmu.sk/sk/?page=1&id=monitoring_sucha", title: "Slovak drought monitoring"},
+        {icon: "ARSO_meteo.png", url: "https://www.meteo.si/uploads/probase/www/agromet/bulletin/drought/sl/", title: "Slovenian drought monitoring"},
         ]
     case "heatwave":
       return [
-        {icon: "media/logo/TU_Wien-Logo.svg", url: "https://warnungen.zamg.at/wsapp/de/alle/heute/-114294,119674,916956,672359"},
-        {icon: "media/logo/DHMZ logo.png", url: "https://meteo.hr/prognoze_e.php?section=prognoze_specp&param=toplinskival_5"},
-        {icon: "", url: ""},
+        {icon: "TU_Wien-Logo.svg", url: "https://warnungen.zamg.at/wsapp/de/alle/heute/-114294,119674,916956,672359", title: "GeoSphere Austria – warnings"},
+        {icon: "DHMZ logo.png", url: "https://meteo.hr/prognoze_e.php?section=prognoze_specp&param=toplinskival_5", title: "Croatian heat wave warning system"},
         ]
     case "wildfire":
       return [
-        {icon: "media/logo/EN_logo_CzechGlobe_transparent.png", url: "https://www.firerisk.cz/"},
-        {icon: "media/logo/TU_Wien-Logo.svg", url: "https://www.zamg.ac.at/cms/de/wetter/wetter-oesterreich/waldbrand"},
-        {icon: "", url: ""},
+        {icon: "EN_logo_CzechGlobe_transparent.png", url: "https://www.firerisk.cz/", title: "FireRisk – Czechia"},
+        {icon: "TU_Wien-Logo.svg", url: "https://www.zamg.ac.at/cms/de/wetter/wetter-oesterreich/waldbrand", title: "Austrian forest fire warning system"},
         ]
   }
 }
@@ -126,8 +127,8 @@ function setPartnerLinks(fig_type, partners) {
 
   inner_html = ""
   for (var i = 0; i < partners.length; i++) {
-    inner_html = inner_html + '<a href="' + partners[i].url +
-      '"><img src="' + partners[i].icon + '" style="width:100%" /></a>'
+    inner_html = inner_html + '<a href="' + partners[i].url + '" title="' +
+      partners[i].title + '"><img src="media/logo/' + partners[i].icon + '" style="width:100%" /></a>'
   }
   partner_div.innerHTML = inner_html
 }
@@ -184,7 +185,7 @@ function onClick(e) {
 
 function createPopup(feature) {
   let start_html = '<div class=popupContent>' + feature.properties.NAME + ':<br>'
-  let org1_html = '<a href="'+feature.properties.org1_link+'" title="'+feature.properties.org2_title+'"><img src="' + feature.properties.org1_logo + '" width="100%" /></a>'
+  let org1_html = '<a href="'+feature.properties.org1_link+'" title="'+feature.properties.org1_title+'"><img src="' + feature.properties.org1_logo + '" width="100%" /></a>'
   if (feature.properties.hasOwnProperty('org2_link')) {
     let org2_html = '<br><a href="'+feature.properties.org2_link+'" title="'+feature.properties.org2_title+'"><img src="'+feature.properties.org2_logo+'" width="100%" /></a>'
     return start_html + org1_html + org2_html + '</div>'
