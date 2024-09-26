@@ -4,8 +4,8 @@ body {
     display: grid;
     grid-template:
     "header header" 7.5vh
-    "stations map" 52.5vh
-    "prediction map" 30vh
+    "prediction stations" 40vh
+    "prediction map" 42.5vh
     "footer footer" 10vh
     / 1fr 1fr;
 }
