@@ -99,9 +99,10 @@ function createMap(geojson) {
     }).addTo(map);
 }
 
-async function onLoad() {
+async function onPageLoad() {
     const geojson_stations = await fetchStations()
     
     populateStations(geojson_stations)
     createMap(geojson_stations)
 };
+onPageLoad()
