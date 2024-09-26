@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template:
+    "header header" 7.5vh
+    "stations map" 52.5vh
+    "prediction map" 30vh
+    "footer footer" 10vh
+    / 1fr 1fr;
+}
+
+header {
+    grid-area: header;
+    background-color: #86b918;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 25px;
+    height: 100%;
+    align-self: center;
+}
+
+#selection_container {
+    grid-area: stations;
+    width: 100%;
+}
+
+#region_selection {
+    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 20px;
+    /*display: flex;
+    flex-wrap: wrap; /* Wrap items into multiple rows */
+}
+
+.divStations {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#prediction {
+    grid-area: prediction;
+    background-color: lightsteelblue;
+}
+
+#map {
+    grid-area: map;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #86b918;
+    padding: 25px;
+}
+
+
+@media (max-width: 992px) {
+    body {
+        grid-template:
+        "header" 7.5vh
+        "map" 52.5vh
+        "stations" 30vh
+        "prediction" 30vh
+        "footer" 10vh
+        / 1fr;
+    }
+}
