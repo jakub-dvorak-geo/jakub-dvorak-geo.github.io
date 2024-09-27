@@ -25,11 +25,17 @@
                 <div id="region_selection"></div>
                 <div id="station_selection"></div>
             </div>
-            <div id="prediction">Here should be images with model outputs</div>
+            <div id="prediction">
+                <img id="temperature" src="media/predictions/graphtemplate_temp.png"/>
+                <img id="precipitation" src="media/predictions/graphtemplate_prec.png"/>
+                <img id="wind_speed" src="media/predictions/graphtemplate_wspd.png"/>
+                <img id="relative_humidity" src="media/predictions/graphtemplate_relh.png"/>
+            </div>
             <div id="map"></div>
         <!--</div>-->
         <footer>
-            Footer template
+            Footer template<br>
+            Vysvětlivky ke grafům naleznete na této adrese: <a href="https://www.intersucho.cz/userfiles/file/predpovedi_intersucho_navod_2021.pdf">https://www.intersucho.cz/userfiles/file/predpovedi_intersucho_navod_2021.pdf</a>.
         </footer>
 
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
