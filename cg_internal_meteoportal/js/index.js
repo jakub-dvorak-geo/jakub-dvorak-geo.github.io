@@ -27,11 +27,18 @@ function onRegionClick() {
 
 function onStationClick(event){
     const feature = event.target ? event.target.feature : event; // If coming from a button, it's the feature itself
-
-    const targetDiv = document.getElementById('prediction')
     console.log(feature)
 
-    targetDiv.innerText = 'Showing predictions for station ' + feature.properties.Name
+    const targetDiv = document.getElementById('prediction')
+    const temp = document.getElementById('temperature')
+    const prec = document.getElementById('precipitation')
+    const wspd = document.getElementById('wind_speed')
+    const relh = document.getElementById('relative_humidity')
+
+    temp.src = 'media/predictions/graphtemplate_temp.png'
+    prec.src = 'media/predictions/graphtemplate_prec.png'
+    wspd.src = 'media/predictions/graphtemplate_wspd.png'
+    relh.src = 'media/predictions/graphtemplate_relh.png'
 }
 
 function populateStations(json) {
@@ -69,7 +76,7 @@ function populateStations(json) {
 }
 
 function createMap(geojson) {
-    var map = L.map('map').setView([50, 15.5], 7);
+    var map = L.map('map').setView([49.8, 15.5], 7);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
