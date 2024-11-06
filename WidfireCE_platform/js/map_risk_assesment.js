@@ -140,7 +140,7 @@ async function addRegions(info, map) {
         const geojson = await response.json();
         var regions = {};
 
-        var layer = L.geoJSON(geojson, {
+        var layer = await L.geoJSON(geojson, {
             style: {
                 color: "black",
                 fillOpacity: 0,
