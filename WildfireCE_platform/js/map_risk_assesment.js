@@ -195,18 +195,27 @@ async function addRegions(info, map) {
 async function loadVector(info) {
     const response = await fetch(info["url"]);
     const geojson = await response.json();
-    var layer = L.geoJSON(geojson, {style: info["style"]});
+    var layer = L.geoJSON(geojson, {
+        style: info["style"],
+        pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, info["markerOptions"]);
+        },
+    });
     return layer
 };
 
-var style_fireMgmt = {color: "black", stroke: false, opacity: 1}
+var style_fireMgmt = {color: "black", stroke: false, fillOpacity: 1}
+var style_natura = {color: "green", weight: 1, fillOpacity: 0.8}
+var style_infra = {fillColor: "red", weight: 0.5, fillOpacity: 0.8}
+var markerOptions_trees = {color: "yellow", radius: 2, weight: 1}
 
 async function addVectors(layerControl, map) {
     const vectorsInfo = [
+        //{name: "Natura 2000 sites", url: "../mapdata/natura2000_test_simplify.geojson", style: style_natura},
         {name: "Potential fire management areas", url: "./mapdata/fire_management_areas_test.geojson", style: style_fireMgmt},
         {name: "Acacia stands", url: "./mapdata/acacia_stands_test.geojson"},
-        {name: "Conservation infrastructure", url: "./mapdata/conservation_infrastructure_test.geojson"},
-        {name: "Valuable trees", url: "./mapdata/valuable_trees_test.geojson"},
+        {name: "Conservation infrastructure", url: "./mapdata/conservation_infrastructure_test.geojson", style: style_infra},
+        {name: "Valuable trees", url: "./mapdata/valuable_trees_test.geojson", markerOptions: markerOptions_trees},
         //{name: "", url: "../mapdata/_test.geojson"},
     ];
 
@@ -280,11 +289,14 @@ function createMap() {
 
     addRasters(layerControl, map)
 
+    addVectors(layerControl, map)
+
+
     // Add vector alyer with regions
-    const regionsInfo = {name: "regions", url: "./mapdata/regions_poly.geojson"}
+    const regionsInfo = {name: "regions", url: "./mapdata/regions_nuts_sites.geojson"} //"./mapdata/regions_poly.geojson"}
     addRegions(regionsInfo, map)
 
-    addVectors(layerControl, map)
+
 }
 
 createMap()
